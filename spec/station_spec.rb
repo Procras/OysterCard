@@ -8,7 +8,7 @@ describe Station do
     expect(station.name).to eq("termini")
   end
 
-  it 'containts zone of station' do
+  it 'contains zone of station' do
     expect(station.zone).to eq(1)
   end
 

@@ -1,3 +1,4 @@
+require_relative 'journey'
 class Oystercard
 
   MAX_BALANCE = 90
@@ -28,14 +29,14 @@ class Oystercard
 
   def touch_out(station)
     deduct(MIN_CHARGE)
-    @exit_station = station
+    #@exit_station = station
     @journey << { entry_station: entry_station, exit_station: exit_station }
     @entry_station = nil
     exit_station
   end
 
   def journeys
-    @journey
+    @journey_history
   end
 
   private
